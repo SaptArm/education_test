@@ -56,8 +56,8 @@ def loadFileLists():
 
     testPositive = positiveFiles[:p20]
     testNegative = negativeFiles[:p20]
-    positiveFiles = positiveFiles[p20:]
-    negativeFiles = negativeFiles[p20:]
+    positiveFiles = positiveFiles[:p10]
+    negativeFiles = negativeFiles[p20:
 
     trainSamples = [(f, 1) for f in positiveFiles] + [(f, 0) for f in negativeFiles]
     testSamples = [(f, 1) for f in testPositive] + [(f, 0) for f in testNegative]
